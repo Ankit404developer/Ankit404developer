@@ -28,6 +28,7 @@ header p {
     padding: 20px;
 }
 
+/* Sections */
 .section {
     background-color: #fff;
     margin: 20px 0;
@@ -88,14 +89,15 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .navbar a {
-    float: left;
-    display: block;
     color: white;
     padding: 14px 20px;
-    text-align: center;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -105,15 +107,41 @@ a:hover {
     color: black;
 }
 
-/* Smooth Scroll for anchor links */
-html {
-    scroll-behavior: smooth;
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
 }
 
-/* Media Queries for responsive design */
-@media screen and (max-width: 768px) {
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 14px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
     .container {
         width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
     }
 
     header h1 {
@@ -124,8 +152,52 @@ html {
         font-size: 1.2em;
     }
 
-    .navbar a {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
         font-size: 1em;
-        padding: 10px;
-    }
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .project-link {
+        font-size: 16px;
+    }
 }
