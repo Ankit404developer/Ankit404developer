@@ -1,4 +1,4 @@
-/* Global styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,198 +6,100 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 15px;
 }
 
 header h1 {
+    font-size: 22px;
     margin: 0;
-    font-size: 3em;
 }
 
 header p {
-    font-size: 1.5em;
+    font-size: 16px;
 }
 
+/* Main Container */
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
 }
 
-/* Sections */
+/* Section Styling */
 .section {
     background-color: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    margin: 15px 0;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
+/* Headings */
 h2 {
     color: #333;
-    font-size: 2em;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
+/* Paragraphs */
 p {
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
+    line-height: 1.6;
 }
 
+/* Lists */
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 ul li {
-    margin: 10px 0;
-    font-size: 1.2em;
+    margin: 8px 0;
 }
 
+/* Links */
 a {
     color: #007BFF;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 a:hover {
     color: #0056b3;
 }
 
-.project-link {
-    padding: 10px;
-    display: block;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* Contact Section */
+.contact a {
+    font-weight: bold;
+    color: #d9534f;
 }
 
-.project-link:hover {
-    background-color: #0056b3;
-}
-
-/* Sticky Navigation Bar */
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Hamburger Menu */
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-}
-
-.nav-links a {
-    padding: 14px;
-    text-align: center;
-}
-
-@media screen and (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
-
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     header h1 {
-        font-size: 2.5em;
+        font-size: 20px;
     }
 
     header p {
-        font-size: 1.3em;
+        font-size: 14px;
     }
-}
 
-@media screen and (max-width: 768px) {
     .container {
         width: 95%;
-        padding: 10px;
     }
 
-    header h1 {
-        font-size: 2em;
+    h2 {
+        font-size: 18px;
     }
 
-    header p {
-        font-size: 1.2em;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links a {
-        text-align: left;
-        padding: 10px;
-        width: 100%;
-        display: block;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    header {
-        padding: 20px;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .project-link {
-        font-size: 16px;
+    p, a {
+        font-size: 14px;
     }
 }
