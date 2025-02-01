@@ -13,7 +13,20 @@
   <header>
     <h1>Saraswati Puja Exhibition 2025</h1>
     <p>Innovative Projects made by students of SRKMHS</p>
+    <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
   </header>
+
+  <!-- Hamburger Menu -->
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href="#project1">Automatic Solar Tracking System</a></li>
+      <li><a href="#project2">Automatic Bridge Light</a></li>
+      <li><a href="#project3">Energy from Saline Water</a></li>
+      <li><a href="#project4">Over Speeding Car Detection System</a></li>
+      <li><a href="#project5">Smart Zebra Crossing</a></li>
+      <li><a href="#project6">Smart Door Control from Anywhere</a></li>
+    </ul>
+  </nav>
 
   <!-- Main Content Section -->
   <div class="container">
@@ -23,19 +36,6 @@
       <p>This exhibition showcases six innovative projects created by students of SRKMHS for the Saraswati Puja 2025.
         These projects highlight the creativity and technical skills of the students in areas such as automation, energy
         conservation, and safety systems.</p>
-    </section>
-
-    <!-- Project List -->
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="#project1">Automatic Solar Tracking System</a></li>
-        <li><a href="#project2">Automatic Bridge Light</a></li>
-        <li><a href="#project3">Energy from Saline Water</a></li>
-        <li><a href="#project4">Over Speeding Car Detection System</a></li>
-        <li><a href="#project5">Smart Zebra Crossing</a></li>
-        <li><a href="#project6">Smart Door Control from Anywhere</a></li>
-      </ul>
     </section>
 
     <!-- Individual Project Sections -->
@@ -59,7 +59,8 @@
           jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;"
           alt="How to make a solar tracking system using Arduino step by step" jsname="kn3ccd" aria-hidden="false"></p>
       <p><strong>C++ Code:</strong></p>
-      <pre>
+      <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
+      <pre id="code1" style="display:none;">
 #include <Servo.h>
 Servo myServo;
 int 1dr1Pin = A0;
@@ -97,7 +98,11 @@ digitalWrite(ledPin, LOW);
 }
 delay(100);
 }
-            </pre>
+      </pre>
+      <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">Automatic solar trackers are devices that adjust the position of solar panels to follow the sun’s path across the sky. This enhances the efficiency of solar energy systems by maximizing the exposure of solar panels to sunlight throughout the day. Here’s a pointwise breakdown of their applications and usage:</p>
+      <!-- Add your content here -->
     </section>
 
     <section class="section" id="project2">
@@ -112,6 +117,9 @@ delay(100);
           style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; max-width: 100%; height: auto;"
           src="https://i.ytimg.com/vi/q1DK6Rzlwpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBKjaubfx9Z-VFsLsvvboygauQdMg">
       </p>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">An automatic power-saving bridge light system that activates when a car is detected is an innovative and energy-efficient solution for lighting on bridges and roads. The system uses sensors, typically motion or infrared sensors, that are strategically placed along the bridge or roadway to detect the presence of a vehicle. When no vehicle is present, the lights remain off or are dimmed, which helps conserve energy and reduce operating costs. Once a car or vehicle approaches, the sensors trigger the lights to activate, ensuring that the bridge or road is properly illuminated for the safety of drivers, pedestrians, and cyclists.</p>
+      <!-- Add your content here -->
     </section>
 
     <section class="section" id="project3">
@@ -131,12 +139,16 @@ delay(100);
         Therefore, carbon-ve aluminum '+'ve carbon and aluminum create a potential difference in the external circuit
         Adding - will flow from carbon to aluminum as long as H+ and CI- are present.
         To learn more about this visit: </p>
-    </section>
-    <p><strong>Circuit Diagram:</strong>
+      <p><strong>Circuit Diagram:</strong>
       <img
         style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; max-width: 100%; height: auto;"
         src="https://ourfuture.energy/wp-content/uploads/2019/06/electrochemical-battery.png" width="500" height="513">
-    <p>
+      <p>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">Energy from saline water is an innovative concept that leverages the salinity gradient between seawater and freshwater to generate power. This process, known as salinity gradient power or blue energy, takes advantage of the natural difference in salt concentration between two bodies of water, typically seawater and river water, to produce electricity. There are several methods to harness energy from saline water, including pressure retarded osmosis (PRO), reverse electrodialysis (RED), and salinity gradient solar ponds.</p>
+      <!-- Add your content here -->
+    </section>
+
     <section class="section" id="project4">
       <h2>Over Speeding Car Detection System</h2>
       <p><strong>Description:</strong> This system detects vehicles that exceed the speed limit and activates an alert
@@ -152,8 +164,10 @@ delay(100);
           src="https://www.electricaltechnology.org/wp-content/uploads/2019/07/Car-Speed-Detection-Circuit.png"
           jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;"
           alt="Car Speed Detector Circuit - Working and Source Code" jsname="kn3ccd" aria-hidden="false"></p>
-      <p><strong>C++ <p><strong>C++ Code:</strong></p>
-          <pre>#include <Wire.h>
+      <p><strong>C++ Code:</strong></p>
+      <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
+      <pre id="code2" style="display:none;">
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
 #define SENSOR1 2 // IR Sensor 1 connected to Pin 2
@@ -235,40 +249,45 @@ void loop() {
     lcd.print("Ready for Next");
   }
 }
-</p>
-        </section>
+      </pre>
+      <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">Overspeeding car detection is a vital aspect of traffic management that helps improve road safety by identifying vehicles that exceed speed limits. This technology typically uses sensors, cameras, and radar systems to monitor vehicle speeds and ensure compliance with posted speed limits. The primary goal is to reduce accidents caused by speeding and promote safer driving practices.</p>
+      <!-- Add your content here -->
+    </section>
 
-        <section class="section" id="project5">
-            <h2>Smart Zebra Crossing</h2>
-            <p><strong>Description:</strong> This project involves an automated zebra crossing system that controls traffic lights for safer pedestrian crossings.</p>
-            <p><strong>How It Works:</strong> 1. Initial State (GREEN_STATE):**
--0-30 Seconds:
-  - Green LED turns ON at 1s (stays ON until 30s)
-  - Yellow LED turns ON at 30s (green turns OFF)
-  - System waits for ultrasonic sensor to detect an object ≤2cm
+    <section class="section" id="project5">
+      <h2>Smart Zebra Crossing</h2>
+      <p><strong>Description:</strong> This project involves an automated zebra crossing system that controls traffic lights for safer pedestrian crossings.</p>
+      <p><strong>How It Works:</strong> 1. Initial State (GREEN_STATE):**
+      -0-30 Seconds:
+        - Green LED turns ON at 1s (stays ON until 30s)
+        - Yellow LED turns ON at 30s (green turns OFF)
+        - System waits for ultrasonic sensor to detect an object ≤2cm
 
-2. Sensor Detection (Transition):
-- If an object is detected within 2cm during the yellow LED phase:
-  - Yellow LED turns OFF
-  - Red LED turns ON
-  - Servo rotates 90°
-  - Switches to RED_STATE
+      2. Sensor Detection (Transition):
+      - If an object is detected within 2cm during the yellow LED phase:
+        - Yellow LED turns OFF
+        - Red LED turns ON
+        - Servo rotates 90°
+        - Switches to RED_STATE
 
-3. RED_STATE:
-- 0-20 Seconds:
-  - Red LED stays ON
-- 20-30 Seconds:
-  - Yellow LED turns ON (red turns OFF)
-- At 30 Seconds:
-  - Yellow turns OFF
-  - Green turns ON
-  - Servo returns to 0°
-  - Cycle restarts in GREEN_STATE
-</p>
-            <p><strong>Circuit Diagram:</strong> <img src="https://europe1.discourse-cdn.com/arduino/original/4X/6/f/8/6f8308c461f61c02f807a7aaa51e711c51e85590.jpeg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Traffic barrier HELP ME PLSSS - Project Guidance - Arduino Forum" jsname="kn3ccd" aria-hidden="false"></p>
-            <p><strong>C++ Code:</strong></p>
-            <pre>
- #include <Servo.h>
+      3. RED_STATE:
+      - 0-20 Seconds:
+        - Red LED stays ON
+      - 20-30 Seconds:
+        - Yellow LED turns ON (red turns OFF)
+      - At 30 Seconds:
+        - Yellow turns OFF
+        - Green turns ON
+        - Servo returns to 0°
+        - Cycle restarts in GREEN_STATE
+      </p>
+      <p><strong>Circuit Diagram:</strong> <img src="https://europe1.discourse-cdn.com/arduino/original/4X/6/f/8/6f8308c461f61c02f807a7aaa51e711c51e85590.jpeg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Traffic barrier HELP ME PLSSS - Project Guidance - Arduino Forum" jsname="kn3ccd" aria-hidden="false"></p>
+      <p><strong>C++ Code:</strong></p>
+      <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
+      <pre id="code3" style="display:none;">
+#include <Servo.h>
 
 // Pin definitions
 const int greenLed = 2;
@@ -376,19 +395,24 @@ void loop() {
       break;
   }
 }
-To learn more about this visit:
-</p>
-        </section>
+      </pre>
+      <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">A smart zebra crossing is an advanced version of the traditional pedestrian crossing designed to enhance safety and improve traffic flow. By integrating technology, these crossings respond dynamically to the presence of pedestrians and vehicles, making them more efficient and safer than conventional crossings. These smart systems often use sensors, cameras, and connected devices to detect pedestrians and manage traffic signals accordingly.</p>
+      <!-- Add your content here -->
+    </section>
 
-        <section class="section" id="project6">
-            <h2>Smart Door Control from Anywhere</h2>
-            <p><strong>Description:</strong> This project allows you to control doors remotely using a mobile app or a web interface.
-To learn more about this visit: 
-</p>
-            <p><strong>How It Works:</strong> The system uses Wi-Fi or Bluetooth to connect to a mobile device, allowing remote control of the door. We have used here ESP8266 and a servo. You can control any load or your home form anywhere of earth with an internet and Blynk app.</p>
-            <p><strong>Circuit Diagram:</strong> <img src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/circuit-2.jpg?resize=1024%2C529&amp;ssl=1" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Servo motor control using ESP8266 and Blynk app - Step by step instructions  - SriTu Hobby" jsname="kn3ccd" aria-hidden="false"></p>
-            <p><strong>C++ Code:</strong></p>
-            <pre>#include <ESP8266WiFi.h>
+    <section class="section" id="project6">
+      <h2>Smart Door Control from Anywhere</h2>
+      <p><strong>Description:</strong> This project allows you to control doors remotely using a mobile app or a web interface.
+      To learn more about this visit: 
+      </p>
+      <p><strong>How It Works:</strong> The system uses Wi-Fi or Bluetooth to connect to a mobile device, allowing remote control of the door. We have used here ESP8266 and a servo. You can control any load or your home form anywhere of earth with an internet and Blynk app.</p>
+      <p><strong>Circuit Diagram:</strong> <img src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/circuit-2.jpg?resize=1024%2C529&amp;ssl=1" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Servo motor control using ESP8266 and Blynk app - Step by step instructions  - SriTu Hobby" jsname="kn3ccd" aria-hidden="false"></p>
+      <p><strong>C++ Code:</strong></p>
+      <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
+      <pre id="code4" style="display:none;">
+#include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <Servo.h>
 
@@ -446,21 +470,44 @@ void loop() {
   // Handle incoming client requests
   server.handleClient();
 }
- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Credit</title>
-</head>
-<body>
-    <footer>
-        <p>Website Making Credit Goes to <strong>Ankit Pramanik</strong></p>
-        <p>Contact: <a href="mailto:ankit404developer@gmail.com">ankit404developer@gmail.com</a></p>
-    </footer>
-</body>
-</html>
+      </pre>
+      <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
+      <p><strong>Applications and Usages:</strong></p>
+      <p class="animated-text">Universal control of home loads refers to the ability to manage and control various electrical devices and systems in a home from a single interface, often through smart technology. This system is designed to optimize energy usage, enhance convenience, improve security, and reduce energy consumption across the home. By integrating different home appliances, lighting, heating, cooling, and security systems, homeowners can remotely control and monitor their home’s electrical loads, either via smartphone apps, voice commands, or automated scheduling.</p>
+      <!-- Add your content here -->
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="section" id="project7">
+      <h2>Our Team</h2>
+      <p><strong>Team Member:</strong> Ankit Pramanik</p>
+      <p><strong>Team Member:</strong> Satyaki Manal</p>
+      <p><strong>Team Member:</strong> Ayush Das</p>
+      <p><strong>Team Member:</strong> Toufir Shaikh</p>
+      <p><strong>Team Member:</strong> Imanur Rahaman</p>
+      <p><strong>Team Member:</strong> Sukanta Paul</p>
+      <p><strong>Team Member:</strong> Jishu Paul</p>
+      <p><strong>Team Member:</strong> Sukanta Paul</p>
+    </section>
+
+    <!-- Contact The Developer Section -->
+    <section class="section" id="project8">
+      <h2>Contact The Developer</h2>
+      <p><strong>Email:</strong> ankit404developer@gmail.com</p>
+      <p><strong>Alternative Email:</strong> ankit44hacker@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9641646315</p>
+    </section>
+
+    <!-- End Section -->
+    <section class="section" id="end">
+      <p><strong>You are now at the end.</strong></p>
+      <p><strong>Do you want to go to the top?</strong></p>
+    </section>
+
+  </div>
+
+  <!-- Back to Top Button -->
+  <button onclick="topFunction()" id="topBtn" title="Go to top">Go to top</button>
 
   <script>
     function toggleDarkMode() {
@@ -498,9 +545,103 @@ void loop() {
         greetingElement.style.display = 'none';
       }, 5000);
     }
+
+    function toggleMenu() {
+      const projectList = document.getElementById('menu');
+      if (projectList.classList.contains('hidden')) {
+        projectList.classList.remove('hidden');
+      } else {
+        projectList.classList.add('hidden');
+      }
+    }
+
+    // Back to Top Button Script
+    var topButton = document.getElementById("topBtn");
+
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+        topButton.classList.add("show");
+        topButton.classList.remove("hide");
+      } else {
+        topButton.classList.add("hide");
+        topButton.classList.remove("show");
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
+    function toggleCode(id) {
+      var codeBlock = document.getElementById(id);
+      if (codeBlock.style.display === "none") {
+        codeBlock.style.display = "block";
+      } else {
+        codeBlock.style.display = "none";
+      }
+    }
   </script>
+  <style>
+    /* ...existing styles... */
+    .hamburger-menu {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.5em;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #0073e6;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    #topBtn:hover {
+      background-color: #555;
+    }
+
+    #topBtn.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #topBtn.hide {
+      display: block;
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  </style>
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">Mode</button>
+  <!-- Rate Us on GitHub Button -->
+  <button onclick="window.open('https://github.com/your-repo', '_blank')" style="background-color: #24292e; color: white; border-radius: 12px; position: fixed; bottom: 20px; right: 30px; z-index: 1000;">Rate Us on GitHub</button>
 </body>
-
 </html>
