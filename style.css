@@ -12,13 +12,14 @@ body {
 }
 
 header {
-    background-color: #0073e6;
+    background: linear-gradient(135deg, #0073e6, #005bb5);
     color: #fff;
     padding: 20px;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
     font-family: 'Open Sans', sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #005bb5;
 }
 
 header h1 {
@@ -39,7 +40,11 @@ header p {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
 }
 
 .section {
@@ -48,8 +53,12 @@ header p {
     background-color: #e9e9e9;
     border-radius: 8px;
     animation: slideIn 1s ease-in-out;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section:hover {
+    transform: scale(1.02);
 }
 
 .section h2 {
@@ -86,7 +95,8 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background-color: #1e1e1e;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    border-bottom: 5px solid #333;
 }
 
 body.dark-mode .container {
