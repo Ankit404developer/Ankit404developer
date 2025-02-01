@@ -1,88 +1,44 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+/* Updated Responsive Design */
+@media screen and (max-width: 1024px) {
+    /* Large Tablet Styles */
+    header {
+        padding: 14px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 85%;
+        max-width: 800px; /* Limits width for better readability */
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p, a {
+        font-size: 16px;
+        line-height: 1.6; /* Improved line spacing */
+    }
+
+    .section {
+        margin: 14px 0;
+        padding: 14px;
+    }
 }
 
-/* Header */
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
-header h1 {
-    font-size: 22px;
-    margin: 0;
-}
-
-header p {
-    font-size: 16px;
-}
-
-/* Main Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px;
-}
-
-/* Section Styling */
-.section {
-    background-color: #fff;
-    margin: 15px 0;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-/* Headings */
-h2 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-/* Paragraphs */
-p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Lists */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin: 8px 0;
-}
-
-/* Links */
-a {
-    color: #007BFF;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-/* Contact Section */
-.contact a {
-    font-weight: bold;
-    color: #d9534f;
-}
-
-/* Responsive Design */
 @media screen and (max-width: 768px) {
+    /* Tablet Styles */
+    header {
+        padding: 12px;
+    }
+
     header h1 {
         font-size: 20px;
     }
@@ -92,7 +48,8 @@ a:hover {
     }
 
     .container {
-        width: 95%;
+        width: 90%;
+        max-width: 600px; /* Limits width for better readability */
     }
 
     h2 {
@@ -101,5 +58,63 @@ a:hover {
 
     p, a {
         font-size: 14px;
+        line-height: 1.7; /* Improved line spacing */
+    }
+
+    .section {
+        margin: 12px 0;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile Styles */
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; /* Ensures padding doesn't affect width */
+    }
+
+    h2 {
+        font-size: 17px;
+        margin-bottom: 8px;
+    }
+
+    p, a {
+        font-size: 13px;
+        line-height: 1.8; /* Even more spacing for mobile */
+    }
+
+    .section {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    /* Maintain text width for better readability */
+    .section p {
+        max-width: 35em; /* Prevents lines from getting too long */
+    }
+}
+
+/* Add this to handle small mobile devices */
+@media screen and (max-width: 360px) {
+    header h1 {
+        font-size: 17px;
+    }
+
+    p, a {
+        font-size: 12px;
     }
 }
