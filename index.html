@@ -653,6 +653,17 @@ void loop() {
         codeBlock.style.display = "none";
       }
     }
+
+    // New function to handle text click
+    document.addEventListener('click', function(event) {
+      const activeElement = document.querySelector('.active-text');
+      if (activeElement) {
+        activeElement.classList.remove('active-text');
+      }
+      if (event.target.matches('p, h1, h2, h3, h4, h5, h6, a')) {
+        event.target.classList.add('active-text');
+      }
+    });
   </script>
   <style>
     /* ...existing styles... */
@@ -711,8 +722,8 @@ void loop() {
       font-size: 0.9em;
     }
 
-    /* New styles for touch interaction */
-    p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:active, a:active {
+    /* New styles for active text */
+    .active-text {
       color: blue;
     }
   </style>
