@@ -1,3 +1,88 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.section h2 {
+    margin-top: 0;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    margin: 10px 0;
+}
+
+.section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Updated Responsive Design */
 @media screen and (max-width: 1024px) {
     /* Large Tablet Styles */
@@ -40,11 +125,11 @@
     }
 
     header h1 {
-        font-size: 20px;
+        font-size: 2em;
     }
 
     header p {
-        font-size: 14px;
+        font-size: 1em;
     }
 
     .container {
@@ -53,11 +138,11 @@
     }
 
     h2 {
-        font-size: 18px;
+        font-size: 1.5em;
     }
 
     p, a {
-        font-size: 14px;
+        font-size: 1em;
         line-height: 1.7; /* Improved line spacing */
     }
 
@@ -74,27 +159,25 @@
     }
 
     header h1 {
-        font-size: 18px;
+        font-size: 1.5em;
     }
 
     header p {
-        font-size: 13px;
+        font-size: 0.9em;
     }
 
     .container {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box; /* Ensures padding doesn't affect width */
+        width: 95%;
+        max-width: 400px; /* Limits width for better readability */
     }
 
     h2 {
-        font-size: 17px;
-        margin-bottom: 8px;
-    }
-
-    p, a {
-        font-size: 13px;
-        line-height: 1.8; /* Even more spacing for mobile */
+        font-size: 1.2em;
+    }url(https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize%3D102%2C971%26ssl%3D1)
+url(https://https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize%3D10240%2C971%26ssl%3D1)
+    p, a {url(https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize%3D1024%2C971%26ssl%3D1)
+        font-size: 0em;
+        line-height: 1.6; /* Improved line spacing */
     }
 
     .section {
@@ -102,19 +185,13 @@
         padding: 10px;
     }
 
-    /* Maintain text width for better readability */
-    .section p {
-        max-width: 35em; /* Prevents lines from getting too long */
-    }
-}
-
-/* Add this to handle small mobile devices */
-@media screen and (max-width: 360px) {
-    header h1 {
-        font-size: 17px;
+    img {
+        max-width: 100%;
+        height: auto;
     }
 
-    p, a {
-        font-size: 12px;
+    pre {
+        white-space: pre-wrap; /* Allows code to wrap within the viewport */
+        word-wrap: break-word; /* Breaks long words to fit within the viewport */
     }
 }
