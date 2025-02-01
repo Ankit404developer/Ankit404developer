@@ -18,11 +18,13 @@ header {
     text-align: center;
     animation: fadeIn 2s ease-in-out;
     font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
@@ -32,10 +34,11 @@ header p {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     transition: background-color 0.3s;
 }
 
@@ -46,11 +49,14 @@ header p {
     border-radius: 8px;
     animation: slideIn 1s ease-in-out;
     transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .section h2 {
     margin-top: 0;
     font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
 }
 
 .section ul {
@@ -65,10 +71,12 @@ header p {
 .section ul li a {
     text-decoration: none;
     color: #0073e6;
+    transition: color 0.3s;
 }
 
 .section ul li a:hover {
     text-decoration: underline;
+    color: #005bb5;
 }
 
 /* Dark Mode Styles */
@@ -96,7 +104,7 @@ body.dark-mode .section ul li a {
 /* Dark Mode Toggle Button */
 .dark-mode-toggle {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     background-color: #0073e6;
     color: #fff;
@@ -104,12 +112,14 @@ body.dark-mode .section ul li a {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
     font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .dark-mode-toggle:hover {
     background-color: #005bb5;
+    transform: scale(1.05);
 }
 
 /* Keyframes for Animations */
