@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saraswati Puja Exhibition 2025</title>
-    <link rel="stylesheet" href="style.css">
-       
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saraswati Puja Exhibition 2025</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Header Section -->
-    <header>
-        <h1>Saraswati Puja Exhibition 2025</h1>
-        <p>Innovative Projects made by students of SRKMHS</p>
-    </header>
 
-    <!-- Main Content Section -->
-    <div class="container">
-        <!-- Description of the Exhibition -->
-        <section class="section" id="description">
-            <h2>Exhibition Overview</h2>
-            <p>This exhibition showcases six innovative projects created by students of SRKMHS for the Saraswati Puja 2025. These projects highlight the creativity and technical skills of the students in areas such as automation, energy conservation, and safety systems.</p>
-        </section>
+  <!-- Header Section -->
+  <header>
+    <h1>Saraswati Puja Exhibition 2025</h1>
+    <p>Innovative Projects made by students of SRKMHS</p>
+  </header>
 
-        <!-- Project List -->
-        <section class="section" id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#project1">Automatic Solar Tracking System</a></li>
-                <li><a href="#project2">Automatic Bridge Light</a></li>
-                <li><a href="#project3">Energy from Saline Water</a></li>
-                <li><a href="#project4">Over Speeding Car Detection System</a></li>
-                <li><a href="#project5">Smart Zebra Crossing</a></li>
-                <li><a href="#project6">Smart Door Control from Anywhere</a></li>
-                   </ul>
-        </section>
+  <!-- Main Content Section -->
+  <div class="container">
+    <!-- Description of the Exhibition -->
+    <section class="section" id="description">
+      <h2>Exhibition Overview</h2>
+      <p>This exhibition showcases six innovative projects created by students of SRKMHS for the Saraswati Puja 2025.
+        These projects highlight the creativity and technical skills of the students in areas such as automation, energy
+        conservation, and safety systems.</p>
+    </section>
 
-        <!-- Individual Project Sections -->
-        <section class="section" id="project1">
-            <h2>Automatic Solar Tracking System</h2>
-            <p><strong>Description:</strong> This project automatically adjusts the position of solar panels to track the sun using LDR sensors and a servo motor, maximizing energy absorption throughout the day.</p>
-            <p><strong>How It Works:</strong> 1. Light Detection: The light sensors placed on the solar panel detect the intensity of sunlight. These sensors are typically arranged on the panel's surface or along the edges.
-2. Comparison: The controller compares the readings from the light sensors. The sensor with the most sunlight detected indicates the direction of the sun.
-3. Adjustment: The microcontroller sends commands to the motors to tilt or rotate the solar panel toward the direction of the strongest light intensity. The motors adjust the panel’s angle, either in a horizontal (azimuth) or vertical (elevation) direction.
-4. Continuous Tracking: This process continues throughout the day, with the panel adjusting its position to follow the sun’s path. The system automatically tracks the sun’s movement from east to west and adjusts the panel's orientation accordingly.
-To learn more about this visit: </p>
-            <p><strong>Circuit Diagram:</strong> <img src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&amp;ssl=1" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1024px; height: 477px; margin: 0px; width: 503px;" alt="How to make a solar tracking system using Arduino step by step" jsname="kn3ccd" aria-hidden="false"></p>
-            <p><strong>C++ Code:</strong></p>
-            <pre>
+    <!-- Project List -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><a href="#project1">Automatic Solar Tracking System</a></li>
+        <li><a href="#project2">Automatic Bridge Light</a></li>
+        <li><a href="#project3">Energy from Saline Water</a></li>
+        <li><a href="#project4">Over Speeding Car Detection System</a></li>
+        <li><a href="#project5">Smart Zebra Crossing</a></li>
+        <li><a href="#project6">Smart Door Control from Anywhere</a></li>
+      </ul>
+    </section>
+
+    <!-- Individual Project Sections -->
+    <section class="section" id="project1">
+      <h2>Automatic Solar Tracking System</h2>
+      <p><strong>Description:</strong> This project automatically adjusts the position of solar panels to track the sun
+        using LDR sensors and a servo motor, maximizing energy absorption throughout the day.</p>
+      <p><strong>How It Works:</strong> 1. Light Detection: The light sensors placed on the solar panel detect the
+        intensity of sunlight. These sensors are typically arranged on the panel's surface or along the edges.
+        2. Comparison: The controller compares the readings from the light sensors. The sensor with the most sunlight
+        detected indicates the direction of the sun.
+        3. Adjustment: The microcontroller sends commands to the motors to tilt or rotate the solar panel toward the
+        direction of the strongest light intensity. The motors adjust the panel’s angle, either in a horizontal
+        (azimuth) or vertical (elevation) direction.
+        4. Continuous Tracking: This process continues throughout the day, with the panel adjusting its position to
+        follow the sun’s path. The system automatically tracks the sun’s movement from east to west and adjusts the
+        panel's orientation accordingly.
+        To learn more about this visit: </p>
+      <p><strong>Circuit Diagram:</strong> <img
+          src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&amp;ssl=1"
+          jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1024px; height: 477px; margin: 0px; width: 503px;"
+          alt="How to make a solar tracking system using Arduino step by step" jsname="kn3ccd" aria-hidden="false"></p>
+      <p><strong>C++ Code:</strong></p>
+      <pre>
 #include <Servo.h>
 Servo myServo;
 int 1dr1Pin = A0;
@@ -84,45 +97,64 @@ digitalWrite(ledPin, LOW);
 delay(100);
 }
             </pre>
-        </section>
+    </section>
 
-        <section class="section" id="project2">
-            <h2>Automatic Bridge Light</h2>
-            <p><strong>Description:</strong> This project automatically controls the lights on a bridge using IR Sensor while detecting an Object.</p>
-            <p><strong>How It Works:</strong> The lights turn on when IR Sensor detects an object. The IR Sensor has two parts. Emitter & Receiver. When an object is detected then light glows. This can save huge amount of Energy.
-To learn more about this visit:
-</p>
-            <p><strong>Circuit Diagram:</strong><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://i.ytimg.com/vi/q1DK6Rzlwpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBKjaubfx9Z-VFsLsvvboygauQdMg"></p>
-                    </section>
+    <section class="section" id="project2">
+      <h2>Automatic Bridge Light</h2>
+      <p><strong>Description:</strong> This project automatically controls the lights on a bridge using IR Sensor while
+        detecting an Object.</p>
+      <p><strong>How It Works:</strong> The lights turn on when IR Sensor detects an object. The IR Sensor has two
+        parts. Emitter & Receiver. When an object is detected then light glows. This can save huge amount of Energy.
+        To learn more about this visit:
+      </p>
+      <p><strong>Circuit Diagram:</strong><img
+          style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+          src="https://i.ytimg.com/vi/q1DK6Rzlwpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBKjaubfx9Z-VFsLsvvboygauQdMg">
+      </p>
+    </section>
 
-        <section class="section" id="project3">
-            <h2>Energy from Saline Water</h2>
-            <p><strong>Description:</strong> This project explores how energy can be generated from saline water through electrochemical reactions.</p>
-            <p><strong>How It Works:</strong>
-When salt (NaCl) is added to water it breaks down into Na+  CI-, where Na+ acts mainly.
-CI- gives up electron to become CI atom and that electron is accepted in carbon rod. C12 gas is released in the form of mercury after nuclear fusion.
+    <section class="section" id="project3">
+      <h2>Energy from Saline Water</h2>
+      <p><strong>Description:</strong> This project explores how energy can be generated from saline water through
+        electrochemical reactions.</p>
+      <p><strong>How It Works:</strong>
+        When salt (NaCl) is added to water it breaks down into Na+ CI-, where Na+ acts mainly.
+        CI- gives up electron to become CI atom and that electron is accepted in carbon rod. C12 gas is released in the
+        form of mercury after nuclear fusion.
 
-2Cl2e CICI CI:(1)
+        2Cl2e CICI CI:(1)
 
-The H+ ion in water takes electrons from aluminum to form H. Gas, the electrons bound to the night surface accept H+.
-2H++2H+H+H₂(1)
-Therefore, carbon-ve aluminum '+'ve carbon and aluminum create a potential difference in the external circuit
-Adding - will flow from carbon to aluminum as long as H+ and CI- are present.
-To learn more about this visit: </p>
-                    </section>
-<p><strong>Circuit Diagram:</strong> <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://ourfuture.energy/wp-content/uploads/2019/06/electrochemical-battery.png" width="619" height="953"> <p>
-        <section class="section" id="project4">
-            <h2>Over Speeding Car Detection System</h2>
-            <p><strong>Description:</strong> This system detects vehicles that exceed the speed limit and activates an alert system to warn drivers. This project also needs two ir sensor placed at a specific distance. When object is detected by ir sensors. Arduino count the time difference between the sensors and calculating from the distance it calculates the speed. If the speed is higher than the threshold red led glows and buzzer rings.</p>
-            <p><strong>How It Works:</strong> The system uses two ir sensor to detect vehicle speed and triggers a warning signal if the speed exceeds the limit. It just calculates the time difference of detecting objects and calculates the speed.
-To learn more about this visit:
-</p>
-            <p><strong>Circuit Diagram:</strong> <img src="https://www.electricaltechnology.org/wp-content/uploads/2019/07/Car-Speed-Detection-Circuit.png" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1325px; height: 401px; margin: 0px; width: 557px;" alt="Car Speed Detector Circuit - Working and Source Code" jsname="kn3ccd" aria-hidden="false"></p>
-            <p><strong>C++ <p><strong>C++ Code:</strong></p>
-            <pre
->#include <Wire.h>
+        The H+ ion in water takes electrons from aluminum to form H. Gas, the electrons bound to the night surface
+        accept H+.
+        2H++2H+H+H₂(1)
+        Therefore, carbon-ve aluminum '+'ve carbon and aluminum create a potential difference in the external circuit
+        Adding - will flow from carbon to aluminum as long as H+ and CI- are present.
+        To learn more about this visit: </p>
+    </section>
+    <p><strong>Circuit Diagram:</strong>
+      <img
+        style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;"
+        src="https://ourfuture.energy/wp-content/uploads/2019/06/electrochemical-battery.png" width="500" height="513">
+    <p>
+    <section class="section" id="project4">
+      <h2>Over Speeding Car Detection System</h2>
+      <p><strong>Description:</strong> This system detects vehicles that exceed the speed limit and activates an alert
+        system to warn drivers. This project also needs two ir sensor placed at a specific distance. When object is
+        detected by ir sensors. Arduino count the time difference between the sensors and calculating from the distance
+        it calculates the speed. If the speed is higher than the threshold red led glows and buzzer rings.</p>
+      <p><strong>How It Works:</strong> The system uses two ir sensor to detect vehicle speed and triggers a warning
+        signal if the speed exceeds the limit. It just calculates the time difference of detecting objects and
+        calculates the speed.
+        To learn more about this visit:
+      </p>
+      <p><strong>Circuit Diagram:</strong> <img
+          src="https://www.electricaltechnology.org/wp-content/uploads/2019/07/Car-Speed-Detection-Circuit.png"
+          jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 1325px; height: 401px; margin: 0px; width: 557px;"
+          alt="Car Speed Detector Circuit - Working and Source Code" jsname="kn3ccd" aria-hidden="false"></p>
+      <p><strong>C++ <p><strong>C++ Code:</strong></p>
+          <pre>#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-
+https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
 #define SENSOR1 2 // IR Sensor 1 connected to Pin 2
 #define SENSOR2 3 // IR Sensor 2 connected to Pin 3
 #define GREEN_LED 8 // Green LED connected to Pin 8
@@ -393,7 +425,7 @@ void setup() {
   server.on("/move/(\\d+)", HTTP_GET, []() {
     String posStr = server.pathArg(0);  // Get the servo position from the URL
     int pos = posStr.toInt();  // Convert to integer
-    
+    https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
     // Constrain the position between 0 and 180
     pos = constrain(pos, 0, 180);
     
