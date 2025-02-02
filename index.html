@@ -133,7 +133,7 @@ delay(100);
       <!-- Add your content here -->
       <p><strong>Components Needed:</strong></p>
       <ul class="small-text">
-        <li>Arduino Uno</li>
+       
         <li>IR Sensors</li>
         <li>LEDs</li>
         <li>Resistors</li>
@@ -663,6 +663,12 @@ void loop() {
         event.target.classList.add('active-text');
       }
     });
+
+    // Redirect to GitHub repository page when the star button is clicked
+    document.getElementById('github-star-btn').addEventListener('click', () => {
+      window.open('https://github.com/Ankit404devoloper/ankit404developee', '_blank');
+      alert('Please star our repository on GitHub!');
+    });
   </script>
   <style>
     /* ...existing styles... */
@@ -729,6 +735,6 @@ void loop() {
   <!-- Dark Mode Toggle Button -->
   <button class="dark-mode-toggle" onclick="toggleDarkMode()">Mode</button>
   <!-- Rate Us on GitHub Button -->
-  <button onclick="window.open('https://github.com/your-repo', '_blank')" style="background-color: #24292e; color: white; border-radius: 12px; position: fixed; bottom: 20px; right: 30px; z-index: 1000;">Rate Us on GitHub</button>
+  <button id="github-star-btn" style="background-color: #24292e; color: white; border-radius: 12px; position: fixed; bottom: 20px; right: 30px; z-index: 1000;">Rate Us on GitHub</button>
 </body>
 </html>
