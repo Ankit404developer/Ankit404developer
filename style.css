@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #0073e6, #005bb5);
+    background: linear-gradient(135deg, #00008B, #ADD8E6); /* Dark blue to light blue gradient */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -289,3 +289,11 @@ body.dark-mode .section ul li a {
         word-wrap: break-word; /* Breaks long words to fit within the viewport */
     }
 }
+
+/* ...existing code... */
+
+.small-text {
+    font-size: 0.9em;
+}
+
+/* ...existing code... */
