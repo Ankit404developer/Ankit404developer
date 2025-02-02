@@ -15,6 +15,9 @@
     .hljs-keyword {
       color: blue;
     }
+    .hljs-variable {
+      color: green;
+    }
   </style>
   <script>hljs.highlightAll();</script>
 </head>
@@ -77,7 +80,7 @@
       <pre id="code1" style="display:none;"><code class="language-cpp">
 #include <Servo.h>
 Servo myServo;
-int 1dr1Pin = A0;
+int ldr1Pin = A0;
 int ldr2Pin = A1;
 int ledPin = 13;
 int servoPin = 9;
@@ -92,13 +95,13 @@ void setup() {
 }
 
 void loop() {
-  int 1dr1Value = analogRead(1dr1Pin);
-  int 1dr2Value = analogRead(1dr2Pin);
+  int ldr1Value = analogRead(ldr1Pin);
+  int ldr2Value = analogRead(ldr2Pin);
   Serial.print("LDR1: ");
   Serial.print(ldr1Value);
   Serial.print(" LDR2: ");
   Serial.println(ldr2Value);
-  int IdrDifference = 1dr1Value - 1dr2Value;
+  int ldrDifference = ldr1Value - ldr2Value;
   if (ldrDifference > threshold && servoPos > 0) {
     servoPos = max(servoPos - map(ldrDifference, 0, 1023, 0, 180), 0);
     myServo.write(servoPos);
@@ -680,7 +683,7 @@ void loop() {
 
     // Redirect to GitHub repository page when the star button is clicked
     document.getElementById('github-star-btn').addEventListener('click', () => {
-      window.open('https://github.com/Ankit404devoloper/Ankit404developer', '_blank');
+      window.open('https://github.com/Ankit404developer/Ankit404developer', '_blank');
       alert('Please star our repository on GitHub!');
     });
   </script>
