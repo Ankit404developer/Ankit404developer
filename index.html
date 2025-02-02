@@ -1,740 +1,299 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saraswati Puja Exhibition 2025</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<img src="https://www.pngall.com/wp-content/uploads/14/Welcome.png" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 616px; height: 243px; margin: 0px; width: 356px;" alt="Welcome PNG Transparent Images" jsname="kn3ccd" aria-hidden="false">
-  <!-- Header Section -->
-  <header>
-    <h1>Saraswati Puja Exhibition 2025</h1>
-    <p>Innovative Projects made by students of SRKMHS</p>
-    <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-  </header>
-
-  <!-- Hamburger Menu -->
-  <nav id="menu" class="hidden">
-    <ul>
-      <li><a href="#project1">Automatic Solar Tracking System</a></li>
-      <li><a href="#project2">Automatic Bridge Light</a></li>
-      <li><a href="#project3">Energy from Saline Water</a></li>
-      <li><a href="#project4">Over Speeding Car Detection System</a></li>
-      <li><a href="#project5">Smart Zebra Crossing</a></li>
-      <li><a href="#project6">Smart Door Control from Anywhere</a></li>
-    </ul>
-  </nav>
-
-  <!-- Main Content Section -->
-  <div class="container">
-    <!-- Description of the Exhibition -->
-    <section class="section" id="description">
-      <h2>Exhibition Overview</h2>
-      <p>This exhibition showcases six innovative projects created by students of SRKMHS for the Saraswati Puja 2025.
-        These projects highlight the creativity and technical skills of the students in areas such as automation, energy
-        conservation, and safety systems.</p>
-    </section>
-
-    <!-- Individual Project Sections -->
-    <section class="section" id="project1">
-      <h2>Automatic Solar Tracking System</h2>
-      <p><strong>Description:</strong> This project automatically adjusts the position of solar panels to track the sun
-        using LDR sensors and a servo motor, maximizing energy absorption throughout the day.</p>
-      <p><strong>How It Works:</strong> 1. Light Detection: The light sensors placed on the solar panel detect the
-        intensity of sunlight. These sensors are typically arranged on the panel's surface or along the edges.
-        2. Comparison: The controller compares the readings from the light sensors. The sensor with the most sunlight
-        detected indicates the direction of the sun.
-        3. Adjustment: The microcontroller sends commands to the motors to tilt or rotate the solar panel toward the
-        direction of the strongest light intensity. The motors adjust the panel’s angle, either in a horizontal
-        (azimuth) or vertical (elevation) direction.
-        4. Continuous Tracking: This process continues throughout the day, with the panel adjusting its position to
-        follow the sun’s path. The system automatically tracks the sun’s movement from east to west and adjusts the
-        panel's orientation accordingly.
-        To learn more about this visit: </p>
-      <p><strong>Circuit Diagram:</strong> <img
-          src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&amp;ssl=1"
-          jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;"
-          alt="How to make a solar tracking system using Arduino step by step" jsname="kn3ccd" aria-hidden="false"></p>
-      <p><strong>C++ Code:</strong></p>
-      <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code1" style="display:none;">
-#include <Servo.h>
-Servo myServo;
-int 1dr1Pin = A0;
-int ldr2Pin = A1;
-int ledPin = 13;
-int servoPin = 9;
-int servoPos = 90;
-int threshold = 50;
-
-void setup() 
-myServo.attach(servoPin);
-myServo.write(servoPos);
-pinMode(ledPin, OUTPUT);
-Serial.begin(115200);
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-void loop() {
-int 1dr1Value = analogRead(1dr1Pin);
-int 1dr2Value = analogRead(1dr2Pin);
-Serial.print("LDR1: ");
-Serial.print(ldr1Value);
-Serial.print(" LDR2: ");
-Serial.println(ldr2Value);
-int IdrDifference = 1dr1Value 1dr2Value;
-if (ldrDifference > threshold && servoPos > 0) servoPos = max(servoPos map(ldrDifference,
-myServo.write(servoPos);
-digitalWrite(ledPin, HIGH);
-}
-else if (ldrDifference <-threshold && servoPos servoPos = min(servoPos map (ldrDifference,
-myServo.write(servoPos);
-digitalWrite(ledPin, HIGH);
-}
-else {
-digitalWrite(ledPin, LOW);
-}
-delay(100);
-}
-      </pre>
-      <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">Automatic solar trackers are devices that adjust the position of solar panels to follow the sun’s path across the sky. This enhances the efficiency of solar energy systems by maximizing the exposure of solar panels to sunlight throughout the day. Here’s a pointwise breakdown of their applications and usage:</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-        <li>Arduino Uno</li>
-        <li>Servo Motor</li>
-        <li>Light Dependent Resistors (LDRs)</li>
-        <li>Resistors</li>
-        <li>Connecting Wires</li>
-        <li>Breadboard</li>
-        <li>Solar Panel</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Automatic Solar Tracking System could include integrating weather sensors to adjust the panel's position based on weather conditions, adding a battery storage system to store excess energy, and implementing remote monitoring and control via a mobile app.</p>
-    </section>
-
-    <section class="section" id="project2">
-      <h2>Automatic Bridge Light</h2>
-      <p><strong>Description:</strong> This project automatically controls the lights on a bridge using IR Sensor while
-        detecting an Object.</p>
-      <p><strong>How It Works:</strong> The lights turn on when IR Sensor detects an object. The IR Sensor has two
-        parts. Emitter & Receiver. When an object is detected then light glows. This can save huge amount of Energy.
-        To learn more about this visit:
-      </p>
-      <p><strong>Circuit Diagram:</strong><img
-          style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; max-width: 100%; height: auto;"
-          src="https://i.ytimg.com/vi/q1DK6Rzlwpg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBKjaubfx9Z-VFsLsvvboygauQdMg">
-      </p>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">An automatic power-saving bridge light system that activates when a car is detected is an innovative and energy-efficient solution for lighting on bridges and roads. The system uses sensors, typically motion or infrared sensors, that are strategically placed along the bridge or roadway to detect the presence of a vehicle. When no vehicle is present, the lights remain off or are dimmed, which helps conserve energy and reduce operating costs. Once a car or vehicle approaches, the sensors trigger the lights to activate, ensuring that the bridge or road is properly illuminated for the safety of drivers, pedestrians, and cyclists.</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-       
-        <li>IR Sensors</li>
-        <li>LEDs</li>
-        <li>Resistors</li>
-        <li>Connecting Wires</li>
-        <li>Breadboard</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Automatic Bridge Light system could include integrating solar panels to power the lights, adding a wireless communication module for remote monitoring and control, and implementing adaptive lighting based on traffic density and weather conditions.</p>
-    </section>
-
-    <section class="section" id="project3">
-      <h2>Energy from Saline Water</h2>
-      <p><strong>Description:</strong> This project explores how energy can be generated from saline water through
-        electrochemical reactions.</p>
-      <p><strong>How It Works:</strong>
-        When salt (NaCl) is added to water it breaks down into Na+ CI-, where Na+ acts mainly.
-        CI- gives up electron to become CI atom and that electron is accepted in carbon rod. C12 gas is released in the
-        form of mercury after nuclear fusion.
-
-        2Cl2e CICI CI:(1)
-
-        The H+ ion in water takes electrons from aluminum to form H. Gas, the electrons bound to the night surface
-        accept H+.
-        2H++2H+H+H₂(1)
-        Therefore, carbon-ve aluminum '+'ve carbon and aluminum create a potential difference in the external circuit
-        Adding - will flow from carbon to aluminum as long as H+ and CI- are present.
-        To learn more about this visit: </p>
-      <p><strong>Circuit Diagram:</strong>
-      <img
-        style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms; max-width: 100%; height: auto;"
-        src="https://ourfuture.energy/wp-content/uploads/2019/06/electrochemical-battery.png" width="500" height="513">
-      <p>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">Energy from saline water is an innovative concept that leverages the salinity gradient between seawater and freshwater to generate power. This process, known as salinity gradient power or blue energy, takes advantage of the natural difference in salt concentration between two bodies of water, typically seawater and river water, to produce electricity. There are several methods to harness energy from saline water, including pressure retarded osmosis (PRO), reverse electrodialysis (RED), and salinity gradient solar ponds.</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-        <li>Saline Water</li>
-        <li>Carbon Rod</li>
-        <li>Aluminum Plate</li>
-        <li>Wires</li>
-        <li>Multimeter</li>
-        <li>Beaker</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Energy from Saline Water project could include optimizing the electrochemical cell design for higher efficiency, integrating a power management system to store and distribute the generated energy, and exploring the use of alternative materials for electrodes to improve performance and reduce costs.</p>
-    </section>
-
-    <section class="section" id="project4">
-      <h2>Over Speeding Car Detection System</h2>
-      <p><strong>Description:</strong> This system detects vehicles that exceed the speed limit and activates an alert
-        system to warn drivers. This project also needs two ir sensor placed at a specific distance. When object is
-        detected by ir sensors. Arduino count the time difference between the sensors and calculating from the distance
-        it calculates the speed. If the speed is higher than the threshold red led glows and buzzer rings.</p>
-      <p><strong>How It Works:</strong> The system uses two ir sensor to detect vehicle speed and triggers a warning
-        signal if the speed exceeds the limit. It just calculates the time difference of detecting objects and
-        calculates the speed.
-        To learn more about this visit:
-      </p>
-      <p><strong>Circuit Diagram:</strong> <img
-          src="https://www.electricaltechnology.org/wp-content/uploads/2019/07/Car-Speed-Detection-Circuit.png"
-          jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;"
-          alt="Car Speed Detector Circuit - Working and Source Code" jsname="kn3ccd" aria-hidden="false"></p>
-      <p><strong>C++ Code:</strong></p>
-      <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code2" style="display:none;">
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
-https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
-#define SENSOR1 2 // IR Sensor 1 connected to Pin 2
-#define SENSOR2 3 // IR Sensor 2 connected to Pin 3
-#define GREEN_LED 8 // Green LED connected to Pin 8
-#define RED_LED 9 // Red LED connected to Pin 9
-#define DISTANCE 14.2 // Distance between sensors in cm
-#define SPEED_LIMIT 40.0 // Speed limit in cm/s
-
-LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address (0x27) for 16x2 LCD
-
-unsigned long startTime, endTime; // Variables to record time
-float speed;
-
-void setup() {
-  pinMode(SENSOR1, INPUT);
-  pinMode(SENSOR2, INPUT);
-  pinMode(GREEN_LED, OUTPUT);
-  pinMode(RED_LED, OUTPUT);
-
-  // Initialize LCD
-  lcd.init(); // Initialize LCD
-  lcd.backlight(); // Turn on backlight
-  lcd.setCursor(0, 0);
-  lcd.print("Speed Measure");
-  lcd.setCursor(0, 1);
-  lcd.print("System Ready!");
-  delay(2000); // Wait 2 seconds
-  lcd.clear();
-
-  Serial.begin(9600); // Initialize Serial Monitor
+header {
+    background: linear-gradient(135deg, #00008B, #ADD8E6); /* Dark blue to light blue gradient */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #005bb5;
 }
 
-void loop() {
-  // Wait for object to trigger Sensor 1
-  if (digitalRead(SENSOR1) == LOW) { // Object detected
-    startTime = millis(); // Record time for Sensor 1
-    
-    // Wait for object to trigger Sensor 2
-    while (digitalRead(SENSOR2) == HIGH) {
-      // Do nothing, wait for object to pass Sensor 2
-    }
-    endTime = millis(); // Record time for Sensor 2
-
-    // Calculate speed
-    float timeTaken = (endTime - startTime) / 1000.0; // Convert ms to seconds
-    speed = DISTANCE / timeTaken; // Speed in cm/s
-
-    // Display speed on Serial Monitor
-    Serial.print("Time Taken: ");
-    Serial.print(timeTaken);
-    Serial.print(" seconds, Speed: ");
-    Serial.print(speed);
-    Serial.println(" cm/s");
-
-    // Display speed on LCD
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Speed: ");
-    lcd.print(speed, 2); // Display speed with 2 decimal places
-    lcd.print(" cm/s");
-
-    // Check if speed exceeds the limit
-    if (speed > SPEED_LIMIT) {
-      digitalWrite(RED_LED, HIGH); // Turn on Red LED
-      digitalWrite(GREEN_LED, LOW); // Turn off Green LED
-      lcd.setCursor(0, 1);
-      lcd.print("Overspeeding!");
-    } else {
-      digitalWrite(RED_LED, LOW); // Turn off Red LED
-      digitalWrite(GREEN_LED, HIGH); // Turn on Green LED
-      lcd.setCursor(0, 1);
-      lcd.print("Speed OK");
-    }
-
-    delay(2000); // Wait 2 seconds before resetting
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Ready for Next");
-  }
-}
-      </pre>
-      <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">Overspeeding car detection is a vital aspect of traffic management that helps improve road safety by identifying vehicles that exceed speed limits. This technology typically uses sensors, cameras, and radar systems to monitor vehicle speeds and ensure compliance with posted speed limits. The primary goal is to reduce accidents caused by speeding and promote safer driving practices.</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-        <li>Arduino Uno</li>
-        <li>IR Sensors</li>
-        <li>LEDs</li>
-        <li>Buzzer</li>
-        <li>Resistors</li>
-        <li>Connecting Wires</li>
-        <li>Breadboard</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Over Speeding Car Detection System could include integrating a camera module for capturing images of speeding vehicles, adding a GPS module for location tracking, and implementing a wireless communication system for real-time alerts to traffic authorities.</p>
-    </section>
-
-    <section class="section" id="project5">
-      <h2>Smart Zebra Crossing</h2>
-      <p><strong>Description:</strong> This project involves an automated zebra crossing system that controls traffic lights for safer pedestrian crossings.</p>
-      <p><strong>How It Works:</strong> 1. Initial State (GREEN_STATE):**
-      -0-30 Seconds:
-        - Green LED turns ON at 1s (stays ON until 30s)
-        - Yellow LED turns ON at 30s (green turns OFF)
-        - System waits for ultrasonic sensor to detect an object ≤2cm
-
-      2. Sensor Detection (Transition):
-      - If an object is detected within 2cm during the yellow LED phase:
-        - Yellow LED turns OFF
-        - Red LED turns ON
-        - Servo rotates 90°
-        - Switches to RED_STATE
-
-      3. RED_STATE:
-      - 0-20 Seconds:
-        - Red LED stays ON
-      - 20-30 Seconds:
-        - Yellow LED turns ON (red turns OFF)
-      - At 30 Seconds:
-        - Yellow turns OFF
-        - Green turns ON
-        - Servo returns to 0°
-        - Cycle restarts in GREEN_STATE
-      </p>
-      <p><strong>Circuit Diagram:</strong> <img src="https://europe1.discourse-cdn.com/arduino/original/4X/6/f/8/6f8308c461f61c02f807a7aaa51e711c51e85590.jpeg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Traffic barrier HELP ME PLSSS - Project Guidance - Arduino Forum" jsname="kn3ccd" aria-hidden="false"></p>
-      <p><strong>C++ Code:</strong></p>
-      <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code3" style="display:none;">
-#include <Servo.h>
-
-// Pin definitions
-const int greenLed = 2;
-const int yellowLed = 3;
-const int redLed = 4;
-const int trigPin = 5;
-const int echoPin = 6;
-const int servoPin = 11;
-
-Servo myServo;
-
-// State management
-enum State { GREEN_STATE, RED_STATE };
-State currentState = GREEN_STATE;
-unsigned long stateStartTime;
-int stateSubPhase = 0; // 0 = counting, 1 = waiting for sensor
-
-void setup() {
-  // Initialize pins
-  pinMode(greenLed, OUTPUT);
-  pinMode(yellowLed, OUTPUT);
-  pinMode(redLed, OUTPUT);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  
-  // Attach servo
-  myServo.attach(servoPin);
-  
-  // Initialize all LEDs to OFF
-  digitalWrite(greenLed, LOW);
-  digitalWrite(yellowLed, LOW);
-  digitalWrite(redLed, LOW);
-  
-  // Initialize state
-  stateStartTime = millis();
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: textGlow 2s infinite alternate;
 }
 
-float readUltrasonicDistance() {
-  // Trigger ultrasonic sensor
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  
-  // Read echo pulse
-  long duration = pulseIn(echoPin, HIGH);
-  return duration * 0.034 / 2; // Convert to cm
+header p {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-void loop() {
-  unsigned long currentTime = millis();
-  unsigned long elapsedTime = currentTime - stateStartTime;
-
-  switch(currentState) {
-    case GREEN_STATE:
-      if(stateSubPhase == 0) { // Counting phase (0-30s)
-        if(elapsedTime >= 1000 && elapsedTime < 30000) {
-          digitalWrite(greenLed, HIGH);
-        } else {
-          digitalWrite(greenLed, LOW);
-        }
-        
-        if(elapsedTime >= 30000) {
-          digitalWrite(greenLed, LOW);
-          digitalWrite(yellowLed, HIGH);
-          stateSubPhase = 1; // Switch to sensor check
-        }
-      }
-      else if(stateSubPhase == 1) { // Waiting for object
-        float distance = readUltrasonicDistance();
-        if(distance <= 2.0) {
-          digitalWrite(yellowLed, LOW);
-          digitalWrite(redLed, HIGH);
-          myServo.write(90);
-          
-          // Switch to RED_STATE
-          currentState = RED_STATE;
-          stateStartTime = millis();
-          stateSubPhase = 0;
-        }
-      }
-      break;
-
-    case RED_STATE:
-      if(elapsedTime < 20000) { // 0-20s: Red ON
-        digitalWrite(redLed, HIGH);
-        digitalWrite(yellowLed, LOW);
-        digitalWrite(greenLed, LOW);
-      }
-      else if(elapsedTime < 30000) { // 20-30s: Yellow ON
-        digitalWrite(redLed, LOW);
-        digitalWrite(yellowLed, HIGH);
-      }
-      else { // 30s: Reset to GREEN_STATE
-        digitalWrite(yellowLed, LOW);
-        digitalWrite(greenLed, HIGH);
-        myServo.write(0);
-        
-        // Switch to GREEN_STATE
-        currentState = GREEN_STATE;
-        stateStartTime = millis();
-        stateSubPhase = 0;
-      }
-      break;
-  }
-}
-      </pre>
-      <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">A smart zebra crossing is an advanced version of the traditional pedestrian crossing designed to enhance safety and improve traffic flow. By integrating technology, these crossings respond dynamically to the presence of pedestrians and vehicles, making them more efficient and safer than conventional crossings. These smart systems often use sensors, cameras, and connected devices to detect pedestrians and manage traffic signals accordingly.</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-        <li>Arduino Uno</li>
-        <li>Ultrasonic Sensor</li>
-        <li>LEDs</li>
-        <li>Servo Motor</li>
-        <li>Resistors</li>
-        <li>Connecting Wires</li>
-        <li>Breadboard</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Smart Zebra Crossing could include integrating a pedestrian detection system using computer vision, adding a countdown timer for pedestrians, and implementing a wireless communication system for real-time traffic updates.</p>
-    </section>
-
-    <section class="section" id="project6">
-      <h2>Smart Door Control from Anywhere</h2>
-      <p><strong>Description:</strong> This project allows you to control doors remotely using a mobile app or a web interface.
-      To learn more about this visit: 
-      </p>
-      <p><strong>How It Works:</strong> The system uses Wi-Fi or Bluetooth to connect to a mobile device, allowing remote control of the door. We have used here ESP8266 and a servo. You can control any load or your home form anywhere of earth with an internet and Blynk app.</p>
-      <p><strong>Circuit Diagram:</strong> <img src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/circuit-2.jpg?resize=1024%2C529&amp;ssl=1" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Servo motor control using ESP8266 and Blynk app - Step by step instructions  - SriTu Hobby" jsname="kn3ccd" aria-hidden="false"></p>
-      <p><strong>C++ Code:</strong></p>
-      <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code4" style="display:none;">
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
-#include <Servo.h>
-
-// Replace with your network credentials
-const char* ssid = "YOUR_SSID";
-const char* password = "YOUR_PASSWORD";
-
-// Create the servo object
-Servo myservo;
-
-ESP8266WebServer server(80);  // Create a web server on port 80
-
-void setup() {
-  // Start the serial communication
-  Serial.begin(115200);
-  
-  // Connect to Wi-Fi
-  WiFi.begin(ssid, password);
-  Serial.print("Connecting to WiFi...");
-  
-  // Wait for Wi-Fi connection
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.print(".");
-  }
-  
-  Serial.println("Connected to WiFi");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
-  
-  // Initialize the servo on pin D4 (GPIO2)
-  myservo.attach(D4);
-
-  // Define the web server route for controlling the servo
-  server.on("/move/(\\d+)", HTTP_GET, []() {
-    String posStr = server.pathArg(0);  // Get the servo position from the URL
-    int pos = posStr.toInt();  // Convert to integer
-    https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
-    // Constrain the position between 0 and 180
-    pos = constrain(pos, 0, 180);
-    
-    // Move the servo to the position
-    myservo.write(pos);
-    
-    // Send the response back
-    String message = "Servo moved to " + String(pos) + "°";
-    server.send(200, "text/plain", message);
-  });
-
-  // Start the web server
-  server.begin();
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-void loop() {
-  // Handle incoming client requests
-  server.handleClient();
+.container:hover {
+    transform: scale(1.02);
 }
-      </pre>
-      <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
-      <p><strong>Applications and Usages:</strong></p>
-      <p class="animated-text">Universal control of home loads refers to the ability to manage and control various electrical devices and systems in a home from a single interface, often through smart technology. This system is designed to optimize energy usage, enhance convenience, improve security, and reduce energy consumption across the home. By integrating different home appliances, lighting, heating, cooling, and security systems, homeowners can remotely control and monitor their home’s electrical loads, either via smartphone apps, voice commands, or automated scheduling.</p>
-      <!-- Add your content here -->
-      <p><strong>Components Needed:</strong></p>
-      <ul class="small-text">
-        <li>ESP8266</li>
-        <li>Servo Motor</li>
-        <li>Connecting Wires</li>
-        <li>Breadboard</li>
-        <li>Power Supply</li>
-      </ul>
-      <p><strong>Future Enhancements:</strong></p>
-      <p>Future enhancements for the Smart Door Control system could include integrating a camera module for video monitoring, adding a fingerprint or facial recognition system for enhanced security, and implementing a voice control feature using a virtual assistant.</p>
-    </section>
 
-    <!-- Our Team Section -->
-    <section class="section" id="project7">
-      <h2>Our Team</h2>
-      <p><strong>Team Member:</strong> Ankit Pramanik</p>
-      <p><strong>Team Member:</strong> Satyaki Manal</p>
-      <p><strong>Team Member:</strong> Ayush Das</p>
-      <p><strong>Team Member:</strong> Toufir Shaikh</p>
-      <p><strong>Team Member:</strong> Imanur Rahaman</p>
-      <p><strong>Team Member:</strong> Sukanta Paul</p>
-      <p><strong>Team Member:</strong> Jishu Paul</p>
-      <p><strong>Team Member:</strong> Sukanta Paul</p>
-    </section>
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    animation: slideIn 1s ease-in-out;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- Contact The Developer Section -->
-    <section class="section" id="project8">
-      <h2>Contact The Developer</h2>
-      <p><strong>Email:</strong> ankit404developer@gmail.com</p>
-      <p><strong>Alternative Email:</strong> ankit44hacker@gmail.com</p>
-      <p><strong>Phone:</strong> +91 9641646315</p>
-    </section>
+.section:hover {
+    transform: scale(1.02);
+}
 
-    <!-- End Section -->
-    <section class="section" id="end">
-      <p><strong>You are now at the end.</strong></p>
-      <p><strong>Do you want to go to the top?</strong></p>
-    </section>
+.section h2 {
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-  </div>
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-  <!-- Back to Top Button -->
-  <button onclick="topFunction()" id="topBtn" title="Go to top">Go to top</button>
+.section ul li {
+    margin: 10px 0;
+}
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
+.section ul li a {
+    text-decoration: none;
+    color: #0073e6;
+    transition: color 0.3s;
+}
+
+.section ul li a:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    border-bottom: 5px solid #333;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .section {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode .section ul li a {
+    color: #80d4ff;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 2s infinite;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    to {
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Updated Responsive Design */
+@media screen and (max-width: 1024px) {
+    /* Large Tablet Styles */
+    header {
+        padding: 14px;
     }
 
-    function displayGreeting() {
-      const now = new Date();
-      const hours = now.getHours();
-      let greeting;
-
-      if (hours < 12) {
-        greeting = "Good Morning!";
-      } else if (hours < 18) {
-        greeting = "Good Afternoon!";
-      } else {
-        greeting = "Good Evening!";
-      }
-
-      const greetingElement = document.createElement('div');
-      greetingElement.textContent = greeting;
-      greetingElement.style.position = 'fixed';
-      greetingElement.style.top = '20px';
-      greetingElement.style.left = '20px';
-      greetingElement.style.backgroundColor = '#0073e6';
-      greetingElement.style.color = '#fff';
-      greetingElement.style.padding = '10px 20px';
-      greetingElement.style.borderRadius = '5px';
-      greetingElement.style.fontFamily = 'Open Sans, sans-serif';
-      greetingElement.style.zIndex = '1000';
-
-      document.body.appendChild(greetingElement);
-
-      setTimeout(() => {
-        greetingElement.style.display = 'none';
-      }, 5000);
+    header h1 {
+        font-size: 22px;
     }
 
-    function toggleMenu() {
-      const projectList = document.getElementById('menu');
-      if (projectList.classList.contains('hidden')) {
-        projectList.classList.remove('hidden');
-      } else {
-        projectList.classList.add('hidden');
-      }
+    header p {
+        font-size: 16px;
     }
 
-    // Back to Top Button Script
-    var topButton = document.getElementById("topBtn");
-
-    window.onscroll = function() {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-        topButton.classList.add("show");
-        topButton.classList.remove("hide");
-      } else {
-        topButton.classList.add("hide");
-        topButton.classList.remove("show");
-      }
+    .container {
+        width: 85%;
+        max-width: 800px; /* Limits width for better readability */
     }
 
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+    h2 {
+        font-size: 20px;
     }
 
-    function toggleCode(id) {
-      var codeBlock = document.getElementById(id);
-      if (codeBlock.style.display === "none") {
-        codeBlock.style.display = "block";
-      } else {
-        codeBlock.style.display = "none";
-      }
+    p, a {
+        font-size: 16px;
+        line-height: 1.6; /* Improved line spacing */
     }
 
-    // New function to handle text click
-    document.addEventListener('click', function(event) {
-      const activeElement = document.querySelector('.active-text');
-      if (activeElement) {
-        activeElement.classList.remove('active-text');
-      }
-      if (event.target.matches('p, h1, h2, h3, h4, h5, h6, a')) {
-        event.target.classList.add('active-text');
-      }
-    });
+    .section {
+        margin: 14px 0;
+        padding: 14px;
+    }
+}
 
-    // Redirect to GitHub repository page when the star button is clicked
-    document.getElementById('github-star-btn').addEventListener('click', () => {
-      window.open('https://github.com/Ankit404devoloper/ankit404developee', '_blank');
-      alert('Please star our repository on GitHub!');
-    });
-  </script>
-  <style>
-    /* ...existing styles... */
-    .hamburger-menu {
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 1.5em;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
+@media screen and (max-width: 768px) {
+    /* Tablet Styles */
+    header {
+        padding: 12px;
     }
 
-    .hidden {
-      display: none;
+    header h1 {
+        font-size: 2em;
     }
 
-    #topBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      left: 30px;
-      z-index: 99;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      background-color: #0073e6;
-      color: white;
-      cursor: pointer;
-      padding: 15px;
-      border-radius: 4px;
-      transition: opacity 0.4s, transform 0.4s;
+    header p {
+        font-size: 1em;
     }
 
-    #topBtn:hover {
-      background-color: #555;
+    .container {
+        width: 90%;
+        max-width: 600px; /* Limits width for better readability */
     }
 
-    #topBtn.show {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
+    h2 {
+        font-size: 1.5em;
     }
 
-    #topBtn.hide {
-      display: block;
-      opacity: 0;
-      transform: translateY(100px);
+    p, a {
+        font-size: 1em;
+        line-height: 1.7; /* Improved line spacing */
     }
 
-    .small-text {
-      font-size: 0.9em;
+    .section {
+        margin: 12px 0;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile Styles */
+    header {
+        padding: 10px;
     }
 
-    /* New styles for active text */
-    .active-text {
-      color: blue;
+    header h1 {
+        font-size: 1.5em;
     }
-  </style>
-  <!-- Dark Mode Toggle Button -->
-  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Mode</button>
-  <!-- Rate Us on GitHub Button -->
-  <button id="github-star-btn" style="background-color: #24292e; color: white; border-radius: 12px; position: fixed; bottom: 20px; right: 30px; z-index: 1000;">Rate Us on GitHub</button>
-</body>
-</html>
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .container {
+        width: 95%;
+        max-width: 400px; /* Limits width for better readability */
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p, a {
+        font-size: 0.9em;
+        line-height: 1.6; /* Improved line spacing */
+    }
+
+    .section {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    pre {
+        white-space: pre-wrap; /* Allows code to wrap within the viewport */
+        word-wrap: break-word; /* Breaks long words to fit within the viewport */
+    }
+}
+
+/* ...existing code... */
+
+.small-text {
+    font-size: 0.9em;
+}
+
+/* ...existing code... */
