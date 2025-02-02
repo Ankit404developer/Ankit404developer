@@ -6,6 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saraswati Puja Exhibition 2025</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+  <style>
+    .hljs-number {
+      color: red;
+    }
+    .hljs-keyword {
+      color: blue;
+    }
+  </style>
+  <script>hljs.highlightAll();</script>
 </head>
 <img src="https://www.pngall.com/wp-content/uploads/14/Welcome.png" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 616px; height: 243px; margin: 0px; width: 356px;" alt="Welcome PNG Transparent Images" jsname="kn3ccd" aria-hidden="false">
   <!-- Header Section -->
@@ -63,7 +74,7 @@
           alt="How to make a solar tracking system using Arduino step by step" jsname="kn3ccd" aria-hidden="false"></p>
       <p><strong>C++ Code:</strong></p>
       <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code1" style="display:none;">
+      <pre id="code1" style="display:none;"><code class="language-cpp">
 #include <Servo.h>
 Servo myServo;
 int 1dr1Pin = A0;
@@ -73,35 +84,35 @@ int servoPin = 9;
 int servoPos = 90;
 int threshold = 50;
 
-void setup() 
-myServo.attach(servoPin);
-myServo.write(servoPos);
-pinMode(ledPin, OUTPUT);
-Serial.begin(115200);
+void setup() {
+  myServo.attach(servoPin);
+  myServo.write(servoPos);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(115200);
 }
 
 void loop() {
-int 1dr1Value = analogRead(1dr1Pin);
-int 1dr2Value = analogRead(1dr2Pin);
-Serial.print("LDR1: ");
-Serial.print(ldr1Value);
-Serial.print(" LDR2: ");
-Serial.println(ldr2Value);
-int IdrDifference = 1dr1Value 1dr2Value;
-if (ldrDifference > threshold && servoPos > 0) servoPos = max(servoPos map(ldrDifference,
-myServo.write(servoPos);
-digitalWrite(ledPin, HIGH);
+  int 1dr1Value = analogRead(1dr1Pin);
+  int 1dr2Value = analogRead(1dr2Pin);
+  Serial.print("LDR1: ");
+  Serial.print(ldr1Value);
+  Serial.print(" LDR2: ");
+  Serial.println(ldr2Value);
+  int IdrDifference = 1dr1Value - 1dr2Value;
+  if (ldrDifference > threshold && servoPos > 0) {
+    servoPos = max(servoPos - map(ldrDifference, 0, 1023, 0, 180), 0);
+    myServo.write(servoPos);
+    digitalWrite(ledPin, HIGH);
+  } else if (ldrDifference < -threshold && servoPos < 180) {
+    servoPos = min(servoPos + map(-ldrDifference, 0, 1023, 0, 180), 180);
+    myServo.write(servoPos);
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+  delay(100);
 }
-else if (ldrDifference <-threshold && servoPos servoPos = min(servoPos map (ldrDifference,
-myServo.write(servoPos);
-digitalWrite(ledPin, HIGH);
-}
-else {
-digitalWrite(ledPin, LOW);
-}
-delay(100);
-}
-      </pre>
+  </code></pre>
       <button onclick="toggleCode('code1')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
       <p><strong>Applications and Usages:</strong></p>
       <p class="animated-text">Automatic solar trackers are devices that adjust the position of solar panels to follow the sun’s path across the sky. This enhances the efficiency of solar energy systems by maximizing the exposure of solar panels to sunlight throughout the day. Here’s a pointwise breakdown of their applications and usage:</p>
@@ -203,10 +214,9 @@ delay(100);
           alt="Car Speed Detector Circuit - Working and Source Code" jsname="kn3ccd" aria-hidden="false"></p>
       <p><strong>C++ Code:</strong></p>
       <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code2" style="display:none;">
+      <pre id="code2" style="display:none;"><code class="language-cpp">
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
-https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
 #define SENSOR1 2 // IR Sensor 1 connected to Pin 2
 #define SENSOR2 3 // IR Sensor 2 connected to Pin 3
 #define GREEN_LED 8 // Green LED connected to Pin 8
@@ -286,7 +296,7 @@ void loop() {
     lcd.print("Ready for Next");
   }
 }
-      </pre>
+  </code></pre>
       <button onclick="toggleCode('code2')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
       <p><strong>Applications and Usages:</strong></p>
       <p class="animated-text">Overspeeding car detection is a vital aspect of traffic management that helps improve road safety by identifying vehicles that exceed speed limits. This technology typically uses sensors, cameras, and radar systems to monitor vehicle speeds and ensure compliance with posted speed limits. The primary goal is to reduce accidents caused by speeding and promote safer driving practices.</p>
@@ -335,7 +345,7 @@ void loop() {
       <p><strong>Circuit Diagram:</strong> <img src="https://europe1.discourse-cdn.com/arduino/original/4X/6/f/8/6f8308c461f61c02f807a7aaa51e711c51e85590.jpeg" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Traffic barrier HELP ME PLSSS - Project Guidance - Arduino Forum" jsname="kn3ccd" aria-hidden="false"></p>
       <p><strong>C++ Code:</strong></p>
       <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code3" style="display:none;">
+      <pre id="code3" style="display:none;"><code class="language-cpp">
 #include <Servo.h>
 
 // Pin definitions
@@ -444,7 +454,7 @@ void loop() {
       break;
   }
 }
-      </pre>
+  </code></pre>
       <button onclick="toggleCode('code3')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
       <p><strong>Applications and Usages:</strong></p>
       <p class="animated-text">A smart zebra crossing is an advanced version of the traditional pedestrian crossing designed to enhance safety and improve traffic flow. By integrating technology, these crossings respond dynamically to the presence of pedestrians and vehicles, making them more efficient and safer than conventional crossings. These smart systems often use sensors, cameras, and connected devices to detect pedestrians and manage traffic signals accordingly.</p>
@@ -472,7 +482,7 @@ void loop() {
       <p><strong>Circuit Diagram:</strong> <img src="https://i0.wp.com/srituhobby.com/wp-content/uploads/2021/03/circuit-2.jpg?resize=1024%2C529&amp;ssl=1" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 100%; height: auto; margin: 0px;" alt="Servo motor control using ESP8266 and Blynk app - Step by step instructions  - SriTu Hobby" jsname="kn3ccd" aria-hidden="false"></p>
       <p><strong>C++ Code:</strong></p>
       <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Show C++</button>
-      <pre id="code4" style="display:none;">
+      <pre id="code4" style="display:none;"><code class="language-cpp">
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <Servo.h>
@@ -511,7 +521,7 @@ void setup() {
   server.on("/move/(\\d+)", HTTP_GET, []() {
     String posStr = server.pathArg(0);  // Get the servo position from the URL
     int pos = posStr.toInt();  // Convert to integer
-    https://i0.wp.com/srituhobby.com/wp-content/uploads/2022/01/Circuit-1.jpg?resize=1024%2C971&ssl=1
+    
     // Constrain the position between 0 and 180
     pos = constrain(pos, 0, 180);
     
@@ -531,7 +541,7 @@ void loop() {
   // Handle incoming client requests
   server.handleClient();
 }
-      </pre>
+  </code></pre>
       <button onclick="toggleCode('code4')" style="background-color: #0073e6; color: white; border-radius: 12px;">Hide C++</button>
       <p><strong>Applications and Usages:</strong></p>
       <p class="animated-text">Universal control of home loads refers to the ability to manage and control various electrical devices and systems in a home from a single interface, often through smart technology. This system is designed to optimize energy usage, enhance convenience, improve security, and reduce energy consumption across the home. By integrating different home appliances, lighting, heating, cooling, and security systems, homeowners can remotely control and monitor their home’s electrical loads, either via smartphone apps, voice commands, or automated scheduling.</p>
