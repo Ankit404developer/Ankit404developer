@@ -1,5 +1,7 @@
+<img src="https://media1.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif?cid=6c09b9525ybx9hqmtqhkb6wan22ax1r5z4p7k3tojslu6afb&ep=v1_gifs_search&rid=giphy.gif&ct=g" 
+     style="display: block; margin-left: auto; margin-right: auto; width: 500px; height: auto;">
 
-<img src="https://cdn-icons-gif.flaticon.com/17122/17122446.gif" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 640px; height: 250px; margin: 0px; width: 250px;" alt="Laptop Animated Icon | Free Animated Icon" jsname="kn3ccd"><h1 align="center">Hi 👋, I'm Ankit Pramanik</h1>
+<h1 align="center">Hi 👋, I'm Ankit Pramanik</h1>
 <h3 align="center">A passionate frontend developer from India, Wants to work with AI,ML and Web development.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=ankit404developer&label=Profile%20views&color=0e75b6&style=flat" alt="ankit404developer" /> </p>
