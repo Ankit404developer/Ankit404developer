@@ -15,7 +15,7 @@
 - 📫 How to reach me **ankit404developer@gmail.com**
 
 - 📄 Know about my experiences [https://ankit404developer.github.io/me](https://ankit404developer.github.io/me)
-- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ankit404developer)](https://github.com/ankit404developer/github-readme-stats)
+- [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=donut-vertical)](https://github.com/anuraghazra/github-readme-stats)
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=ankit404developer&show_icons=true&theme=radical)
 <h3 align="left">Connect with me:</h3>
 <p align="left">
