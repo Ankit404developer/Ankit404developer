@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Ankit Pramanik</h1>
+<img src="https://cdn-icons-gif.flaticon.com/17122/17122446.gif" jsaction="" class="sFlh5c FyHeAf iPVvYb" style="max-width: 640px; height: 557px; margin: 0px; width: 557px;" alt="Laptop Animated Icon | Free Animated Icon" jsname="kn3ccd"><h1 align="center">Hi 👋, I'm Ankit Pramanik</h1>
 <h3 align="center">A passionate frontend developer from India, Wants to work with AI,ML and Web development.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=ankit404developer&label=Profile%20views&color=0e75b6&style=flat" alt="ankit404developer" /> </p>
