@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download - ZeroByte Mods</title>
+    <meta name="description" content="Download Android Mods & Games" />
+    <meta name="author" content="ZeroByte Mods" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/src/App.css">
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <div id="root">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="logo">
+          <h1>ZeroByte <span>Mods</span></h1>
+        </div>
+        <div class="tagline">
+          <p>🔥 The best Android Mods & Games</p>
+        </div>
+        <a href="index.html" class="back-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to Home
+        </a>
+      </header>
+
+      <!-- Download Page Content -->
+      <div class="download-page">
+        <div id="app-info" class="app-info">
+          <!-- App info will be populated by JavaScript -->
+        </div>
+        
+        <h1>Your download is being prepared</h1>
+        <p>Please wait while we prepare your download...</p>
+        
+        <div class="countdown" id="countdown">10</div>
+        
+        <p class="mb-4">Please wait for the countdown to finish to download your app.</p>
+        
+        <a href="#" class="download-page-btn" id="download-now-btn">Download Now</a>
+        
+        <div class="download-tips">
+          <h3>Installation Tips:</h3>
+          <ul>
+            <li>Uninstall any previous version before installing</li>
+            <li>Enable "Install from unknown sources" in your device settings</li>
+            <li>After installation, restart your device for best performance</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation Bar -->
+      <nav class="bottom-navbar">
+        <a href="index.html" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 2L12 6 8 2"></path></svg>
+          <span>Games</span>
+        </a>
+        <a href="#" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          <span>Apps</span>
+        </a>
+        <a href="#" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          <span>Popular</span>
+        </a>
+        <a href="https://t.me/zerobyte_mods" class="nav-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2L2.5 11L9 11.5L9.5 19L14 15L18 18.5L21.5 2Z"></path></svg>
+          <span>Telegram</span>
+        </a>
+      </nav>
+    </div>
+
+    <script>
+      // Get app ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const appId = urlParams.get('id');
+      const countdownEl = document.getElementById('countdown');
+      const downloadBtn = document.getElementById('download-now-btn');
+      const appInfoEl = document.getElementById('app-info');
+      let countdown = 10;
+
+      // Sample data structure for apps
+      const apps = [
+        {
+          id: "1",
+          name: "Spotify Premium",
+          icon: "https://play-lh.googleusercontent.com/cShys-AmJ93dB0SV8kE6Fl5eSaf4-qRpapEXIBrN4rgb1WoMfBr4uR4HJIZJVrOlAIQ=s180-rw",
+          version: "v8.7.30.1221",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/spotify_premium.apk"
+        },
+        {
+          id: "2",
+          name: "YouTube Premium",
+          icon: "https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s180-rw",
+          version: "v17.36.36",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/youtube_premium.apk"
+        },
+        {
+          id: "3",
+          name: "Call of Duty Mobile",
+          icon: "https://play-lh.googleusercontent.com/N8AYeHrsG6MfNxlis6vEDQBlIHN0_DJfHY8A-Uet2Kw8j1AkLRdRUvwP-npYJm-2zw=s180-rw",
+          version: "v1.0.32",
+          modVersion: "God Mode",
+          downloadLink: "https://www.mediafire.com/file/example/cod_mobile_mod.apk"
+        },
+        {
+          id: "4",
+          name: "Netflix Premium",
+          icon: "https://play-lh.googleusercontent.com/TBRwjS_qfJCSj1m7zZB93FnpJM5fSpMA_wUlFDLxWAb45T9RmwBvQd5cWR5viJJOhkI=s180-rw",
+          version: "v8.12.0",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/netflix_premium.apk"
+        },
+        {
+          id: "5",
+          name: "PUBG Mobile",
+          icon: "https://play-lh.googleusercontent.com/JRd05pyBH41qjgsJuWduRJpDeZG0Hnb0yjf2nWqO7VaGKL10-G5UIygxED-WNOc3pg=s180-rw",
+          version: "v2.5.0",
+          modVersion: "Unlimited UC",
+          downloadLink: "https://www.mediafire.com/file/example/pubg_mobile_mod.apk"
+        },
+        {
+          id: "6",
+          name: "Disney+ Hotstar",
+          icon: "https://play-lh.googleusercontent.com/MmLkAp-x9OvA46_NgaD7kzIJJ6jN_aQe2JPgx7LyrGxSCwJcy6KKj_H-eIOmGYmOQQ=w240-h480-rw",
+          version: "v13.4.8",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/hotstar_premium.apk"
+        },
+        {
+          id: "7",
+          name: "FanCode",
+          icon: "https://play-lh.googleusercontent.com/Z03nHT_nMuY-CE_q9veQyBZ5xO5sTw2Z0xhA2C7d85fbXzZxTvOPTiNKS2UY_uxiJYE=w240-h480-rw",
+          version: "v5.32.0",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/fancode_premium.apk"
+        },
+        {
+          id: "8",
+          name: "TikTok Pro",
+          icon: "https://play-lh.googleusercontent.com/BmUViDVOKNLEm72DQNUXOxGYiLwNVRhzQDmwpyZUjwv4Ua5tAfy5iJeA-PJ5S0Y_B1k=s180-rw",
+          version: "v26.4.3",
+          modVersion: "Premium Features",
+          downloadLink: "https://www.mediafire.com/file/example/tiktok_pro.apk"
+        },
+        {
+          id: "9",
+          name: "Instagram Pro",
+          icon: "https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w240-h480-rw",
+          version: "v245.0.0.18",
+          modVersion: "Premium Features",
+          downloadLink: "https://www.mediafire.com/file/example/instagram_pro.apk"
+        },
+        {
+          id: "10",
+          name: "Minecraft PE",
+          icon: "https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=w240-h480-rw",
+          version: "v1.20.0.1",
+          modVersion: "Unlimited Resources",
+          downloadLink: "https://www.mediafire.com/file/example/minecraft_pe_mod.apk"
+        },
+        {
+          id: "11",
+          name: "JioTV Premium",
+          icon: "https://play-lh.googleusercontent.com/Vtfu71tuGLvDtgwaM0H8iN6UpWe_vZ93nJoWbxnWmATCEjKKVLWVeW9tCxKzcpWH8fk=w240-h480-rw",
+          version: "v6.0.9",
+          modVersion: "Premium Unlocked",
+          downloadLink: "https://www.mediafire.com/file/example/jiotv_premium.apk"
+        },
+        {
+          id: "12",
+          name: "WhatsApp Plus",
+          icon: "https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=w240-h480-rw",
+          version: "v17.40",
+          modVersion: "Extended Features",
+          downloadLink: "https://www.mediafire.com/file/example/whatsapp_plus.apk"
+        }
+      ];
+
+      // Display app info if app exists
+      function displayAppInfo() {
+        const app = apps.find(a => a.id === appId);
+        if (app) {
+          appInfoEl.innerHTML = `
+            <div class="app-info-content">
+              <img src="${app.icon}" alt="${app.name}" class="app-icon">
+              <div class="app-details">
+                <h2>${app.name}</h2>
+                <p>${app.version} | ${app.modVersion}</p>
+              </div>
+            </div>
+          `;
+          
+          // Update page title
+          document.title = `Download ${app.name} - ZeroByte Mods`;
+        } else {
+          appInfoEl.innerHTML = `<p>App information not available</p>`;
+        }
+      }
+
+      // Start countdown timer
+      function startCountdown() {
+        const timer = setInterval(() => {
+          countdown--;
+          countdownEl.textContent = countdown;
+          
+          if (countdown <= 0) {
+            clearInterval(timer);
+            countdownEl.style.display = 'none';
+            downloadBtn.classList.add('visible');
+            
+            // Set the download link
+            if (appId) {
+              const app = apps.find(a => a.id === appId);
+              if (app) {
+                downloadBtn.href = app.downloadLink;
+                downloadBtn.setAttribute('data-app-name', app.name);
+              } else {
+                downloadBtn.href = "https://www.mediafire.com/file/example/default.apk";
+              }
+            } else {
+              downloadBtn.href = "https://www.mediafire.com/file/example/default.apk";
+            }
+          }
+        }, 1000);
+      }
+
+      // Initialize page
+      document.addEventListener('DOMContentLoaded', () => {
+        displayAppInfo();
+        startCountdown();
+        
+        // Add styles for app info and back button
+        const style = document.createElement('style');
+        style.textContent = `
+          .back-button {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: auto;
+            transition: var(--transition);
+          }
+          
+          .back-button svg {
+            margin-right: 0.5rem;
+          }
+          
+          .back-button:hover {
+            color: var(--neon-green);
+          }
+
+          .app-info {
+            margin-bottom: 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+
+          .app-info-content {
+            display: flex;
+            align-items: center;
+          }
+
+          .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            margin-right: 16px;
+          }
+
+          .app-details h2 {
+            margin: 0 0 4px 0;
+            font-size: 1.25rem;
+          }
+
+          .app-details p {
+            margin: 0;
+            opacity: 0.7;
+            font-size: 0.9rem;
+          }
+
+          .download-page-btn {
+            position: relative;
+            background-color: var(--neon-green);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            margin-top: 20px;
+          }
+
+          .download-page-btn.visible {
+            display: inline-block;
+            animation: pulse 2s infinite;
+          }
+
+          .download-page-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+          }
+
+          .download-page-btn:active {
+            transform: translateY(0);
+          }
+
+          .countdown {
+            font-size: 60px;
+            font-weight: bold;
+            color: var(--neon-green);
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+          }
+
+          @keyframes pulse {
+            0% {
+              box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.7);
+            }
+            70% {
+              box-shadow: 0 0 0 10px rgba(0, 230, 118, 0);
+            }
+            100% {
+              box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+            }
+          }
+          
+          .download-tips {
+            margin-top: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 16px;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          
+          .download-tips h3 {
+            margin-top: 0;
+            color: var(--neon-green);
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+          }
+          
+          .download-tips ul {
+            margin: 0;
+            padding-left: 1.5rem;
+          }
+          
+          .download-tips li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+          }
+          
+          .mb-4 {
+            margin-bottom: 1rem;
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Track downloads
+        downloadBtn.addEventListener('click', function() {
+          const appName = this.getAttribute('data-app-name') || 'Unknown app';
+          console.log(`${appName} downloaded!`);
+        });
+      });
+    </script>
+  </body>
+  </html>
